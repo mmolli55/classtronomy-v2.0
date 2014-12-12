@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-  root 'welcome#index'
+  resources :courses
 
+  root 'welcome#index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 

@@ -3,9 +3,13 @@
 
 <h1>Classtronomy v2.0</h1>
 <nav>
-  <a href="#">Sign-In</a> |
-  <a href="#">Register</a> |
-  <a href="#">Courses</a>
+  <%= link_to "Enroll", new_user_registration_path %> |
+  <% if current_user %>
+    <%= link_to "Sign-Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign-In", new_user_session_path %>
+  <% end %> |
+  <%= link_to "Courses", courses_path %>
 </nav>
 
 </section>
