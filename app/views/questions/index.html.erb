@@ -1,0 +1,10 @@
+<div class="page_content">
+
+  <% @course.questions.each do |question| %>
+    <div class="question_wrapper">
+      <p><%= question.content %></p>
+    </div>
+  <% end %>
+
+  <%= link_to 'Add Question', new_course_question_path(@course, @question) %>
+</div>

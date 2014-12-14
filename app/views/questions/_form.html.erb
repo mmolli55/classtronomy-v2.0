@@ -1,0 +1,29 @@
+<%= form_for [@course, @question] do |f| %>
+<p>
+  <%= f.label :content %><br>
+  <%= f.text_area :content %>
+</p>
+<p>
+  <%= f.label :possible_answer1 %><br>
+  <%= f.text_field :possible_answer1 %>
+</p>
+<p>
+  <%= f.label :possible_answer2 %><br>
+  <%= f.text_field :possible_answer2 %>
+</p>
+<p>
+  <%= f.label :possible_answer3 %><br>
+  <%= f.text_field :possible_answer3 %>
+</p>
+<p>
+  <%= f.label :possible_answer4 %><br>
+  <%= f.text_field :possible_answer4 %>
+</p>
+<p>
+  <%= f.label :correct_answer %><br>
+  <%= f.text_field :correct_answer %>
+</p>
+<p>
+  <%= f.submit 'Submit', id: 'submit' %>
+</p>
+<% end %>
