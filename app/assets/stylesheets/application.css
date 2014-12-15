@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
 
 .page_content {
   background: grey;

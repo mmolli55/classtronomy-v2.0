@@ -1,16 +1,20 @@
+<div class="background_image_container">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 
-<section class="page_content">
+  <section class="welcome_page_content">
 
-<h1>Classtronomy v2.0</h1>
-<nav>
-  <%= link_to "Enroll", new_user_registration_path %> |
-  <% if current_user %>
-    <%= link_to "Sign-Out", destroy_user_session_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Sign-In", new_user_session_path %>
-  <% end %> |
-  <%= link_to "Courses", courses_path %>
-</nav>
+  <div class="welcome_page_header">Classtronomy v2.0</div>
+  <nav class="welcome_page_nav">
+    <%= link_to "Enroll", new_user_registration_path, class: 'nav_link' %>
+    <% if current_user %>
+      <%= link_to "Sign-Out", destroy_user_session_path, :method => :delete, class: 'nav_link' %>
+    <% else %>
+      <%= link_to "Sign-In", new_user_session_path, class: 'nav_link' %>
+    <% end %>
+    <%= link_to "Courses", courses_path, class: 'nav_link' %>
+  </nav>
 
-</section>
+  </section>
+</div>
 
