@@ -19,8 +19,14 @@ function ready() {
 
   // Quiz Responses
   $('.quiz_guess').click(function() {
-    $(this).parents(':nth(1)').css('background-color', '#00FFCC');
+    if($(this).text() == $(this).siblings('p').text()) {
+      $(this).parents(':nth(1)').css('background-color', '#00FFCC');
+    } else {
+      $(this).parents(':nth(1)').css('background-color', '#FF4719');
+    }
   });
+
+
 }
 
 $(document).ready(ready);

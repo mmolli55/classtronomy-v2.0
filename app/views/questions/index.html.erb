@@ -8,6 +8,7 @@
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer2 %></button>
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer3 %></button>
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer4 %></button>
+        <p class="correct_answer" hidden><%= question.correct_answer %></p>
       </ul>
       <%= link_to "Edit", edit_course_question_path(@course, question) %>
       <%= link_to "Delete", [@course, question], method: :delete, data: {confirm: "Are you sure?"} %>
