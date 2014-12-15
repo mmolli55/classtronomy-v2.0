@@ -20,11 +20,27 @@ function ready() {
   // Quiz Responses
   $('.quiz_guess').click(function() {
     if($(this).text() == $(this).siblings('p').text()) {
-      $(this).parents(':nth(1)').css('background-color', '#00FFCC');
-    } else {
-      $(this).parents(':nth(1)').css('background-color', '#FF4719');
+      $(this).parents(':nth(1)').removeClass('incorrect_highlighting');
+      $(this).parents(':nth(1)').addClass('correct_highlighting');
+      $(this).parents(':nth(1)').children('.incorrect_declaration').hide();
+      $(this).parents(':nth(1)').children('.correct_declaration').show();
+    }else {
+      $(this).parents(':nth(1)').removeClass('correct_highlighting');
+      $(this).parents(':nth(1)').addClass('incorrect_highlighting');
+      $(this).parents(':nth(1)').children('.correct_declaration').hide();
+      $(this).parents(':nth(1)').children('.incorrect_declaration').show();
     }
   });
+
+  // var incorrectHighlight = function() {
+  //   $(this).parents(':nth(1)').removeClass('correct_highlighting');
+  //   $(this).parents(':nth(1)').addClass('incorrect_highlighting');
+  // };
+
+  // var correctHighlight = function() {
+  //   $(this).parents(':nth(1)').removeClass('incorrect_highlighting');
+  //   $(this).parents(':nth(1)').addClass('correct_highlighting');
+  // };
 
 
 }

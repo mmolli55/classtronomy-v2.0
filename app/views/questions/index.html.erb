@@ -2,7 +2,9 @@
 
   <% @course.questions.each do |question| %>
     <div class="question_wrapper">
+
       <p><%= question.content %></p>
+
       <ul>
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer1 %></button>
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer2 %></button>
@@ -10,6 +12,10 @@
         <button name="possible_answer" class="quiz_guess"><%= question.possible_answer4 %></button>
         <p class="correct_answer" hidden><%= question.correct_answer %></p>
       </ul>
+
+      <p class="correct_declaration" hidden>Correct!</p>
+      <p class="incorrect_declaration" hidden>Incorrect, keep trying...</p>
+
       <%= link_to "Edit", edit_course_question_path(@course, question) %>
       <%= link_to "Delete", [@course, question], method: :delete, data: {confirm: "Are you sure?"} %>
     </div>
