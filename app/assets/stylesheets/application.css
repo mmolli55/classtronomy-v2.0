@@ -84,6 +84,14 @@ a:hover.nav_link {
   margin: 0;
 }
 
+.correct_highlighting {
+  background-color: #00FFCC;
+}
+
+.incorrect_highlighting {
+  background-color: #FF4719;
+}
+
 /* Course Styling */
 
 .course_image {
