@@ -1,4 +1,4 @@
-.background_image_container {
+/*.background_image_container {
   background: url("http://imgsrc.hubblesite.org/hu/db/images/hs-2006-01-a-hires_jpg.jpg");
   background-size: cover;
   height: 100vh;
@@ -8,32 +8,31 @@
 }
 
 .welcome_page_content {
-  background-color: rgba(129,130,129,0.7);
+  background-color: rgba(129,130,129,0.4);
   text-align: center;
   margin-top: 200px;
   height: 180px;
 }
 
 .welcome_page_header {
-  color: #EEEEEE;
+  color: #00FFCC;
+  text-shadow: black 0.1em 0.1em 0.2em;
   height: 90px;
   line-height: 100px;
   font-size: 65px;
   font-style: italic;
-  font-weight: 100;
 }
 
 .welcome_page_nav{
   height: 90px;
   line-height: 100px;
-  font-weight: 400;
 }
 
 .nav_link {
   background-color: #454545;
- /* background-color: #5F5F5F;*/
   border-radius: 10px;
-  padding: 10px;
+  border: 2px solid #EEEEEE;
+  padding: 8px;
   text-decoration: none;
   margin-left: 30px;
   margin-right: 30px;
@@ -41,14 +40,16 @@
 }
 
 a:link.nav_link {
-    color: #00FFCC;
+    color: #EEEEEE;
 }
 
 a:visited.nav_link {
-    color: #00FFCC;
+    color: #EEEEEE;
 }
 
 a:hover.nav_link {
-    color: #818281;
+    color: #00FFCC;
 }
 
+
+*/
