@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function ready() {
+
+  // Quiz Responses
+  $('.quiz_guess').click(function() {
+    $(this).parents(':nth(1)').css('background-color', '#00FFCC');
+  });
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
