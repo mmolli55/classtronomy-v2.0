@@ -1,0 +1,18 @@
+<div class="page_content">
+
+  <% @course.questions.each do |question| %>
+    <div class="question_wrapper">
+      <p><%= question.content %></p>
+      <ul>
+        <button name="possible_answer"><%= question.possible_answer1 %></button>
+        <button name="possible_answer"><%= question.possible_answer2 %></button>
+        <button name="possible_answer"><%= question.possible_answer3 %></button>
+        <button name="possible_answer"><%= question.possible_answer4 %></button>
+      </ul>
+      <%= link_to "Edit", edit_course_question_path(@course, question) %>
+      <%= link_to "Delete", [@course, question], method: :delete, data: {confirm: "Are you sure?"} %>
+    </div>
+  <% end %>
+
+  <%= link_to 'Add Question', new_course_question_path(@course, @question) %>
+</div>

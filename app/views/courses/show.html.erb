@@ -1,5 +1,6 @@
 <div class="page_content">
-<h1><%= @course.name %></h1>
+<h1>Classtronomy</h1>
+<h2><%= @course.name %></h2>
 <%= link_to "Edit Course Materials", edit_course_path(@course) %>
 
 <p><%= @course.paragraph1 %></p>
@@ -12,6 +13,7 @@
 
 <p><%= @course.paragraph3 %></p>
 
+<%= link_to 'Take Quiz', course_questions_path(@course) %>
 <%= link_to 'Back Home', root_path %>
 <%= link_to 'Course List', courses_path %>
 </div>
