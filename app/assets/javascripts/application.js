@@ -32,15 +32,18 @@ function ready() {
     }
   });
 
-  // var incorrectHighlight = function() {
-  //   $(this).parents(':nth(1)').removeClass('correct_highlighting');
-  //   $(this).parents(':nth(1)').addClass('incorrect_highlighting');
-  // };
 
-  // var correctHighlight = function() {
-  //   $(this).parents(':nth(1)').removeClass('incorrect_highlighting');
-  //   $(this).parents(':nth(1)').addClass('correct_highlighting');
-  // };
+  var correctAnswerCount = 0;
+
+  $('.quiz_guess').one("click", function() {
+    if($(this).text() == $(this).siblings('p').text()) {
+      if(correctAnswerCount === 4){
+        alert("Congratulations, you unlocked the planet course badge!");
+      } else {
+        correctAnswerCount += 1;
+      }
+    }
+  });
 
 
 }

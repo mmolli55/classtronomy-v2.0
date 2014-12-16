@@ -2,6 +2,8 @@
 
   <h1><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
 
+  <h2><%= @course.name %> Quiz</h2>
+
   <% @course.questions.each do |question| %>
     <div class="question_wrapper">
 
