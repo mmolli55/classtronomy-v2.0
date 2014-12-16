@@ -1,16 +1,19 @@
 <div class="page_content">
-<h1>List of Courses</h1>
 
-<% @courses.each do |course| %>
-  <div class="course_wrapper">
-    <h2 class="name"><%= link_to course.name, course %></h2>
-  </div>
-<% end %>
+  <h1 class="link_to_home_header">Classtronomy</h1>
 
-<nav>
-  <%= link_to 'Back Home', root_path %>
-  <% if current_user.try(:admin?) %>
-    <%= link_to 'Create New Course', new_course_path %>
+  <h2>List of Courses</h2>
+
+  <% @courses.each do |course| %>
+    <div class="course_wrapper">
+      <%= link_to course.name, course, class: 'course_name' %>
+    </div>
   <% end %>
-</nav>
+
+  <nav>
+    <%= link_to 'Back Home', root_path %>
+    <% if current_user.try(:admin?) %>
+      <%= link_to 'Create New Course', new_course_path %>
+    <% end %>
+  </nav>
 </div>

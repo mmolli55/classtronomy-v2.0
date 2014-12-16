@@ -5,13 +5,24 @@ body {
   font-family: Arial;
 }
 
+h2 {
+  color: #FFAC59;
+}
+
+
 a {
   text-decoration: none;
 }
 
+.link_to_home_header {
+  color: #66FF99;
+  font-style: italic;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
 .page_content {
   padding: 10px;
-  background: grey;
+  background-color: rgba(129,130,129,1);
   height: 100%;
   width: 600px;
   margin: 0 auto;
@@ -37,7 +48,7 @@ a {
 }
 
 .welcome_page_header {
-  color: #00FFCC;
+  color: #66FF99;
   text-shadow: black 0.1em 0.1em 0.2em;
   height: 90px;
   line-height: 100px;
@@ -70,7 +81,8 @@ a:visited.nav_link {
 }
 
 a:hover.nav_link {
-    color: #F468FF;
+    color: #FFAC59;
+    border: 2px solid #FFAC59;
 }
 
 /* Questions Styling */
@@ -85,7 +97,7 @@ a:hover.nav_link {
 }
 
 .correct_highlighting {
-  background-color: #00FFCC;
+  background-color: #66FF99;
 }
 
 .incorrect_highlighting {
@@ -98,7 +110,17 @@ a:hover.nav_link {
   width: 560px;
 }
 
+a:link.course_name {
+  color: #33CCFF;
+}
 
+a:visited.course_name{
+  color: #33CCFF;
+}
+
+a:hover.course_name {
+  color: #5F5F5F;
+}
 
 
 
