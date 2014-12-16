@@ -21,6 +21,31 @@ a {
   text-decoration: none;
 }
 
+.signed_in_notification_container {
+  border-radius: 5px;
+  background-color: #989898;
+  padding: 8px;
+  margin-left: 25px;
+  color: #FFAC59;
+  float: left;
+  text-shadow: black 0.05em 0.05em 0.1em;
+}
+
+.welcome_page_signed_in_notification_container {
+  border-radius: 5px;
+  background-color: rgba(129,130,129,0.4);
+  padding: 8px;
+  margin-left: 25px;
+  color: #FFAC59;
+  float: left;
+  text-shadow: black 0.05em 0.05em 0.1em;
+}
+
+.signed_in_notification {
+  color: #66FF99;
+  text-shadow: black 0.05em 0.05em 0.1em;
+}
+
 .link_to_home_header {
   color: #FFAC59;
   font-size: 60px;
@@ -96,16 +121,18 @@ a:hover.link_to_home_header {
 }
 
 a:link.nav_link {
-    color: #EEEEEE;
+    color: #66FF99;
+    border: 2px solid #FFAC59;
 }
 
 a:visited.nav_link {
-    color: #EEEEEE;
+    color: #66FF99;
+    border: 2px solid #FFAC59;
 }
 
 a:hover.nav_link {
-    color: #66FF99;
-    border: 2px solid #FFAC59;
+    color: #EEEEEE;
+    border: 2px solid #EEEEEE;
 }
 
 /* Questions Styling */
