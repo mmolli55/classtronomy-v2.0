@@ -31,6 +31,18 @@ a {
   margin-bottom: 30px;
 }
 
+a:link.link_to_home_header {
+  color: #FFAC59;
+}
+
+a:visited.link_to_home_header {
+  color: #FFAC59;
+}
+
+a:hover.link_to_home_header {
+  color: #EEEEEE;
+}
+
 .page_content {
   padding: 10px 30px 10px 30px;
   background-color: #989898;
@@ -128,6 +140,19 @@ a:hover.nav_link {
 
 .course_image {
   width: 560px;
+}
+
+.course_index_header {
+  font-size: 35px;
+}
+
+.course_index_wrapper {
+  height: 50px;
+  font-size: 30px;
+}
+
+.course_name {
+  text-shadow: black 0.07em 0.07em 0.1em;
 }
 
 a:link.course_name {
