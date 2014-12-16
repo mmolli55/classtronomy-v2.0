@@ -1,19 +1,24 @@
 <div class="page_content">
-<h1>Classtronomy</h1>
-<h2><%= @course.name %></h2>
-<%= link_to "Edit Course Materials", edit_course_path(@course) %>
 
-<p><%= @course.paragraph1 %></p>
+  <h1>Classtronomy</h1>
 
-<img src="<%= @course.image %>" class="course_image">
+  <h2><%= @course.name %></h2>
 
-<p><%= @course.paragraph2 %></p>
+  <% if current_user.try(:admin?) %>
+    <%= link_to "Edit Course Materials", edit_course_path(@course) %>
+  <% end %>
 
-<iframe width="560" height="315" src="<%= @course.video %>" frameborder="0" allowfullscreen></iframe>
+  <p><%= @course.paragraph1 %></p>
 
-<p><%= @course.paragraph3 %></p>
+  <img src="<%= @course.image %>" class="course_image">
 
-<%= link_to 'Take Quiz', course_questions_path(@course) %>
-<%= link_to 'Back Home', root_path %>
-<%= link_to 'Course List', courses_path %>
+  <p><%= @course.paragraph2 %></p>
+
+  <iframe width="560" height="315" src="<%= @course.video %>" frameborder="0" allowfullscreen></iframe>
+
+  <p><%= @course.paragraph3 %></p>
+
+  <%= link_to 'Take Quiz', course_questions_path(@course) %>
+  <%= link_to 'Back Home', root_path %>
+  <%= link_to 'Course List', courses_path %>
 </div>

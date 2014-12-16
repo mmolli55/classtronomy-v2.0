@@ -8,7 +8,9 @@
 <% end %>
 
 <nav>
-  <%= link_to 'Back Home', root_path %> |
-  <%= link_to 'Create New Course', new_course_path %>
+  <%= link_to 'Back Home', root_path %>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Create New Course', new_course_path %>
+  <% end %>
 </nav>
 </div>
