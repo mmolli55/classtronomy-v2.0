@@ -16,10 +16,14 @@
       <p class="correct_declaration" hidden>Correct!</p>
       <p class="incorrect_declaration" hidden>Incorrect, keep trying...</p>
 
-      <%= link_to "Edit", edit_course_question_path(@course, question) %>
-      <%= link_to "Delete", [@course, question], method: :delete, data: {confirm: "Are you sure?"} %>
+      <% if current_user.try(:admin?) %>
+        <%= link_to "Edit", edit_course_question_path(@course, question) %>
+        <%= link_to "Delete", [@course, question], method: :delete, data: {confirm: "Are you sure?"} %>
+      <% end %>
     </div>
   <% end %>
 
-  <%= link_to 'Add Question', new_course_question_path(@course, @question) %>
+  <% if current_user.try(:admin?) %>
+    <%= link_to 'Add Question', new_course_question_path(@course, @question) %>
+  <% end %>
 </div>
