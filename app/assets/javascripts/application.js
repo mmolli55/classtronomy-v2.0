@@ -43,7 +43,8 @@ function ready() {
       correctAnswerCount += 1;
       if(correctAnswerCount === 5){
          // ajax patch, to update user's score for this course
-        // score_patch_url = "scores/" + gon.score_id;
+        // score_patch_url = "scores/" + gon.course_score_id;
+        // $.ajax(score_patch_url)
         alert("Congratulations, you unlocked the course badge!");
       }
     }
