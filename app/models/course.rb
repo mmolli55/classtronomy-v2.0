@@ -6,7 +6,7 @@ class Course < ActiveRecord::Base
     5
   end
 
-  # def badge_image_file
-  #   "#{badge}.gif"
-  # end
+  def badge_image_file
+    "#{badge}.gif"
+  end
 end
