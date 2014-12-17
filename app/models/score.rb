@@ -4,10 +4,10 @@ class Score < ActiveRecord::Base
   # TODO:
   # vaidates :score, range 1-5
 
-  # scope :passed, -> { where('score = ?', Course.passing_score) }
+  scope :passed, -> { where('score = ?', Course.passing_score) }
 
-  # def badge_image_file
-  #   course.badge_image_file
-  # end
+  def badge_image_file
+    course.badge_image_file
+  end
 
 end

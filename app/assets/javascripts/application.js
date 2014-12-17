@@ -35,16 +35,24 @@ function ready() {
 
   var correctAnswerCount = 0;
 
-  $('.quiz_guess').one("click", function() {
+  $('.quiz_guess').one('click', function() {
 
     // PATCH scores/:id?score=correctAnswerCount
 
     if($(this).text() == $(this).siblings('p').text()) {
       correctAnswerCount += 1;
       if(correctAnswerCount === 5){
-         // ajax patch, to update user's score for this course
-        // score_patch_url = "scores/" + gon.score_id;
         alert("Congratulations, you unlocked the course badge!");
+        // ajax patch, to update user's score for this course
+        score_patch_url = '/scores/' + gon.course_score_id;
+        $.ajax({
+          url: score_patch_url,
+          type: 'PATCH',
+          // success:function(){
+          //   ???
+          // }
+        });
+
       }
     }
   });
