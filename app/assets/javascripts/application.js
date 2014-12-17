@@ -42,7 +42,7 @@ function ready() {
     if($(this).text() == $(this).siblings('p').text()) {
       correctAnswerCount += 1;
       if(correctAnswerCount === 5){
-        alert("Congratulations, you unlocked the course badge!");
+        alert("Congratulations, you unlocked the course badge! Visit your profile page to see all the badges you have collected.");
         // ajax patch, to update user's score for this course
         score_patch_url = '/scores/' + gon.course_score_id + "?score=" + correctAnswerCount;
         $.ajax({

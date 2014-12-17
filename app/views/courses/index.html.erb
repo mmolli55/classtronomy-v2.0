@@ -4,9 +4,9 @@
 
 <div class="page_content">
 
-  <h1><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
+  <h1 class="link_to_home_header_container"><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
 
-  <h2 class="course_index_header">Choose a Course</h2>
+  <h2 class="course_index_header">Choose a Course:</h2>
 
   <% @courses.each do |course| %>
     <div class="course_index_wrapper">
