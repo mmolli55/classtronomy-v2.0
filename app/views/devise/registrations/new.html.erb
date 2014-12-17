@@ -3,7 +3,7 @@
 <% end %>
 
 <div class="page_content">
-  <h1><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
+  <h1 class="link_to_home_header_container"><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
 <h2>Enroll</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>

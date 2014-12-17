@@ -4,13 +4,13 @@
 
 <div class="page_content">
 
-  <h1><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
+  <h1 class="link_to_home_header_container"><%= link_to 'Classtronomy', root_path, class: "link_to_home_header" %></h1>
 
   <h2><%= @user.user_name %> - Profile</h2>
   <p>Badges Earned:</p>
   <ul class="users_badges">
     <% @user.scores.passed.each do |passing_score| %>
-      <li><%= image_tag(passing_score.badge_image_file) %></li>
+      <li><%= image_tag(passing_score.badge_image_file, class: "badge") %></li>
     <% end %>
   </ul>
 
