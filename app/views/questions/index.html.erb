@@ -32,6 +32,8 @@
   <% end %>
 
   <% if current_user.try(:admin?) %>
-    <%= link_to 'Add Question', new_course_question_path(@course, @question) %>
+    <%= link_to 'Add Question', new_course_question_path(@course, @question), class: "nav_link" %><br>
   <% end %>
+  <%= link_to 'Back to Courses', courses_path, class: "nav_link" %>
+  <%= link_to 'Back Home', root_path, class: "nav_link" %>
 </div>
