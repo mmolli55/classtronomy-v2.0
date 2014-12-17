@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
     @course = Course.find(params[:course_id])
     # TODO: create score for current_user, if it doesn't already exist
     # score = Score.find_or_create_by_user_and_course(@course, current_user)
-    score = Score.find_or_create_by(course_id: @course, user_id: current_user)
+    score = Score.find_or_create_by(course: @course, user: current_user)
     gon.push({course_score_id: score.id}) # will be available in js
     @questions = @course.questions
   end

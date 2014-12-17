@@ -44,12 +44,12 @@ function ready() {
       if(correctAnswerCount === 5){
         alert("Congratulations, you unlocked the course badge!");
         // ajax patch, to update user's score for this course
-        score_patch_url = '/scores/' + gon.course_score_id;
+        score_patch_url = '/scores/' + gon.course_score_id + "?score=" + correctAnswerCount;
         $.ajax({
           url: score_patch_url,
           type: 'PATCH',
-          // success:function(){
-          //   ???
+          // success: function(){
+          //   $('.users_badges').appendTo???
           // }
         });
 

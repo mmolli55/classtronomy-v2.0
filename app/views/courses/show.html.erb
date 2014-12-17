@@ -12,15 +12,15 @@
     <%= link_to "Edit Course Materials", edit_course_path(@course) %>
   <% end %>
 
-  <p><%= @course.paragraph1 %></p>
+  <p class="course_text_container"><%= @course.paragraph1 %></p>
 
   <img src="<%= @course.image %>" class="course_image">
 
-  <p><%= @course.paragraph2 %></p>
+  <p class="course_text_container"><%= @course.paragraph2 %></p>
 
   <iframe width="560" height="315" src="<%= @course.video %>" frameborder="0" allowfullscreen></iframe>
 
-  <p><%= @course.paragraph3 %></p>
+  <p class="course_text_container"><%= @course.paragraph3 %></p>
 
   <%= link_to 'Take Quiz', course_questions_path(@course) %><br>
   <%= link_to 'Course List', courses_path %><br>
