@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :courses do
     resources :questions
   end
+  # resources :scores, only: [:create, :update]
 
   root 'welcome#index'
 

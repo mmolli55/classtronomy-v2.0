@@ -36,15 +36,18 @@ function ready() {
   var correctAnswerCount = 0;
 
   $('.quiz_guess').one("click", function() {
+
+    // PATCH scores/:id?score=correctAnswerCount
+
     if($(this).text() == $(this).siblings('p').text()) {
-      if(correctAnswerCount === 4){
-        alert("Congratulations, you unlocked the planet course badge!");
-      } else {
-        correctAnswerCount += 1;
+      correctAnswerCount += 1;
+      if(correctAnswerCount === 5){
+         // ajax patch, to update user's score for this course
+        // score_patch_url = "scores/" + gon.score_id;
+        alert("Congratulations, you unlocked the course badge!");
       }
     }
   });
-
 
 }
 
