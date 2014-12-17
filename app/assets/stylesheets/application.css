@@ -137,8 +137,8 @@ a:visited.nav_link {
 }
 
 a:hover.nav_link {
-    color: #EEEEEE;
-    border: 2px solid #EEEEEE;
+    color: #D8D8D8;
+    border: 2px solid #D8D8D8;
 }
 
 /* Questions Styling */
@@ -186,6 +186,12 @@ a:hover.nav_link {
 
 .course_name {
   text-shadow: black 0.07em 0.07em 0.1em;
+}
+
+.course_text_container {
+  background-color: #D8D8D8;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 a:link.course_name {
