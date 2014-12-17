@@ -22,7 +22,7 @@
 
   <p class="course_text_container"><%= @course.paragraph3 %></p>
 
-  <%= link_to 'Take Quiz', course_questions_path(@course) %><br>
-  <%= link_to 'Course List', courses_path %><br>
-  <%= link_to 'Back Home', root_path %><br>
+  <%= link_to 'Take Quiz', course_questions_path(@course), class: "nav_link" %>
+  <%= link_to 'Course List', courses_path, class: "nav_link" %>
+  <%= link_to 'Back Home', root_path, class: "nav_link" %>
 </div>
