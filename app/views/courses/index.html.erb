@@ -17,7 +17,7 @@
   <nav>
     <%= link_to 'Back Home', root_path, class: "nav_link" %>
     <% if signed_in? %>
-      <%= link_to 'Profile Page', current_user, class: "nav_link" %></p>
+      <%= link_to 'Profile Page', current_user, class: "nav_link" %>
     <% end %>
     <% if current_user.try(:admin?) %>
       <%= link_to 'Create New Course', new_course_path, class: "nav_link" %>
