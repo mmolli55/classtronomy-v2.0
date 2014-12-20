@@ -37,8 +37,6 @@ function ready() {
 
   $('.quiz_guess').one('click', function() {
 
-    // PATCH scores/:id?score=correctAnswerCount
-
     if($(this).text() == $(this).siblings('p').text()) {
       correctAnswerCount += 1;
       if(correctAnswerCount === 5){
@@ -48,11 +46,7 @@ function ready() {
         $.ajax({
           url: score_patch_url,
           type: 'PATCH',
-          // success: function(){
-          //   $('.users_badges').appendTo???
-          // }
         });
-
       }
     }
   });
